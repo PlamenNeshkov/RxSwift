@@ -54,6 +54,11 @@ extension Reactive where Base: UIControl {
 
         return ControlEvent(events: source)
     }
+    
+    /// Reactive wrapper for `TouchUpInside` control event.
+    public var tap: ControlEvent<Void> {
+        return controlEvent(.touchUpInside)
+    }
 
     /// Creates a `ControlProperty` that is triggered by target/action pattern value updates.
     ///
